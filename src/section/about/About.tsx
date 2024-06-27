@@ -40,7 +40,7 @@ const About = () => {
           <a
             target="_blank"
             href="https://drive.google.com/file/d/1-WGq2y9gFGCL1CLwLxcdPrrQVkuNttWI/view?usp=sharing"
-            className="btn primary"
+            className="btn about primary"
           >
             Download Resume <IoMdDownload />
           </a>

@@ -54,11 +54,17 @@
   .about_left {
     display: none;
   }
+
   .about_container {
     grid-template-columns: 1fr;
   }
+
   .about_right h2 {
     text-align: center;
+  }
+
+  a.btn.about {
+    margin: auto;
   }
 }
 
