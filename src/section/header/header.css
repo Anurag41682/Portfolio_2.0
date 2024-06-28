@@ -15,8 +15,8 @@ header {
 }
 
 .header_profile {
-  width: 18rem;
-  aspect-ratio: 1;
+  width: 14rem;
+  height: 17rem;
   border-radius: 9rem 9rem 2rem 2rem;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -52,6 +52,7 @@ header {
   place-items: center;
   border-radius: var(--border-radius-3);
 }
+
 .header_socials a:hover {
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -68,12 +69,6 @@ header {
 
 /* phones */
 @media screen and (max-width: 600px) {
-  .header_profile {
-    width: 14rem;
-    height: 17rem;
-    max-width: 60%;
-    max-height: 35vh;
-  }
   .header_container p {
     width: 100%;
   }
