@@ -1,7 +1,6 @@
 import About from "./section/about/About";
 import Contact from "./section/contact/Contact";
 import FloatinNav from "./section/floating-nav/FloatinNav";
-import Footer from "./section/footer/Footer";
 import Header from "./section/header/Header";
 import Navbar from "./section/navbar/Navbar";
 import Portfolio from "./section/portfolio/Portfolio";
@@ -14,7 +13,6 @@ const App = () => {
       <About />
       <Portfolio />
       <Contact />
-      <Footer />
       <FloatinNav />
     </main>
   );

@@ -60,12 +60,12 @@ header {
 }
 
 /* tablets */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   header {
     margin-top: 0;
     height: 100vh;
   }
-}
+} */
 
 /* phones */
 @media screen and (max-width: 600px) {
