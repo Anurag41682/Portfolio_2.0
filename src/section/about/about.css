@@ -3,6 +3,7 @@
   grid-template-columns: 35% 53%;
   gap: 12%;
 }
+
 .about_portrait {
   height: fit-content;
   max-height: 40rem;
