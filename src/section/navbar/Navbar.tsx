@@ -1,7 +1,7 @@
 import Logo from "../../assets/nav_logo.png";
 import data from "./data";
 import "./navbar.css";
-import { IoColorPaletteSharp } from "react-icons/io5";
+// import { IoColorPaletteSharp } from "react-icons/io5";
 const Navbar = () => {
   return (
     <nav>
@@ -18,9 +18,9 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <button id="theme_icon">
+        {/* <button id="theme_icon">
           <IoColorPaletteSharp />
-        </button>
+        </button> */}
       </div>
     </nav>
   );
