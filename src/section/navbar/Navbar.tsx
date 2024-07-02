@@ -1,4 +1,4 @@
-import Logo from "../../assets/nav_logo.png";
+import Logo from "../../assets/nav_logo.jpg";
 import data from "./data";
 import "./navbar.css";
 // import { IoColorPaletteSharp } from "react-icons/io5";

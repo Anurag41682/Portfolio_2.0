@@ -1,6 +1,8 @@
-import Image1 from "../../assets/project1.jpg";
-import Image2 from "../../assets/project2.jpg";
-import Image3 from "../../assets/project3.jpg";
+import Image1 from "../../assets/project1.png";
+import Image2 from "../../assets/project2.png";
+import Image3 from "../../assets/project3.png";
+import Image4 from "../../assets/project4.png";
+import Image5 from "../../assets/project5.png";
 const data = [
   {
     id: 1,
@@ -8,7 +10,7 @@ const data = [
     image: Image1,
     title: "Job Tracker",
     desc: "A Job tracking web application to track application and look after them efficiently during job search",
-    demo: "",
+    demo: "https://jobtracker.anur4g.me/",
     github: "https://github.com/Anurag41682/JobTracker",
   },
   {
@@ -17,7 +19,7 @@ const data = [
     image: Image2,
     title: "Memories",
     desc: "A Social media kind application where user can share their memories to other people by posting on this platform",
-    demo: "",
+    demo: "https://memories-web-app-two.vercel.app/",
     github: "https://github.com/Anurag41682/Memories-WebApp",
   },
   {
@@ -26,8 +28,26 @@ const data = [
     image: Image3,
     title: "E-Library",
     desc: "An E-library where students can download pdf books of NCERT from classes 8th to 12th easily",
-    demo: "",
+    demo: "https://e-li8rary.netlify.app/",
     github: "https://github.com/Anurag41682/E-Library",
+  },
+  {
+    id: 4,
+    category: "Desktop",
+    image: Image4,
+    title: "Daily-Task",
+    desc: "A desktop application where you can mark your daily task and complete them",
+    demo: "https://github.com/Anurag41682/Daily-Goals/releases/tag/v1.0.0",
+    github: "https://github.com/Anurag41682/Daily-Goals",
+  },
+  {
+    id: 5,
+    category: "Frontend",
+    image: Image5,
+    title: "Number Guess",
+    desc: "A number guess game where player need to guess the number using the hint",
+    demo: "https://guessinggame.anur4g.me/",
+    github: "https://github.com/Anurag41682/Guessing-Game",
   },
 ];
 

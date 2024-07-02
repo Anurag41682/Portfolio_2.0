@@ -27,15 +27,14 @@ const About = () => {
             })}
           </div>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-            quibusdam, tenetur accusamus quod consequatur qui nulla ex dolor
-            porro nemo, voluptatibus dolore maiores, molestias nobis et
-            inventore fugit explicabo. Qui.
+            Hi there, I am Anurag an aspiring Full stack developer completed my
+            Bachelor of technology in computer science. My aim is to build
+            software solution for people using my knowledge in Tech.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
-            quia ut facilis, dolorum nam id sed. Nisi aperiam accusamus aut
-            ipsum odio perspiciatis. Itaque, eum.
+            I also have good understanding of data structure and algorithm that
+            has helped me in improving my problem solving skills and devising
+            effiecient solution for a problem. Check out my Resume below!
           </p>
           <a
             target="_blank"
