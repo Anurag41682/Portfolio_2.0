@@ -38,7 +38,7 @@ const About = () => {
           </p>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1-WGq2y9gFGCL1CLwLxcdPrrQVkuNttWI/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NamqsTFoX_Ns9nDXfCOw1vK0Ne2-vGHH/view?usp=sharing"
             className="btn about primary"
           >
             Download Resume <IoMdDownload />
