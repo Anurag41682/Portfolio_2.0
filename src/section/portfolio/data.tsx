@@ -3,6 +3,7 @@ import Image2 from "../../assets/project2.png";
 import Image3 from "../../assets/project3.png";
 import Image4 from "../../assets/project4.png";
 import Image5 from "../../assets/project5.png";
+import Image6 from "../../assets/project6.png";
 const data = [
   {
     id: 1,
@@ -21,6 +22,15 @@ const data = [
     desc: "A Social media kind application where user can share their memories to other people by posting on this platform",
     demo: "https://memories-web-app-two.vercel.app/",
     github: "https://github.com/Anurag41682/Memories-WebApp",
+  },
+  {
+    id: 6,
+    category: "Frontend",
+    image: Image6,
+    title: "School Website",
+    desc: "A school website that provides essential information about the institution, its mission, academic programs, admissions process.",
+    demo: "https://sch00l-web.netlify.app/",
+    github: "https://github.com/Anurag41682/School-Website",
   },
   {
     id: 3,
