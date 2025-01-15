@@ -56,7 +56,7 @@ const data = [
     image: Image5,
     title: "Number Guess",
     desc: "A number guess game where player need to guess the number using the hint",
-    demo: "https://guessinggame.anur4g.me/",
+    demo: "https://anurag41682.github.io/Guessing-Game/",
     github: "https://github.com/Anurag41682/Guessing-Game",
   },
 ];

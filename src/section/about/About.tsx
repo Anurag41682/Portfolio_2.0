@@ -1,6 +1,6 @@
 import "./about.css";
 import AboutImage from "../../assets/about.jpg";
-import { IoMdDownload } from "react-icons/io";
+// import { IoMdDownload } from "react-icons/io";
 import Card from "../../components/Card";
 import data from "./data";
 
@@ -27,22 +27,22 @@ const About = () => {
             })}
           </div>
           <p>
-            Hi there, I am Anurag an aspiring Full stack developer completed my
+            Hi there, I am Anurag a Full stack developer completed my
             Bachelor of technology in computer science. My aim is to build
             software solution for people using my knowledge in Tech.
           </p>
           <p>
             I also have good understanding of data structure and algorithm that
             has helped me in improving my problem solving skills and devising
-            effiecient solution for a problem. Check out my Resume below!
+            efficient solution for a problem. 
           </p>
-          <a
+          {/* <a
             target="_blank"
             href="https://drive.google.com/file/d/1NamqsTFoX_Ns9nDXfCOw1vK0Ne2-vGHH/view?usp=sharing"
             className="btn about primary"
           >
             Download Resume <IoMdDownload />
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

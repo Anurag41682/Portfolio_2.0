@@ -9,7 +9,7 @@ const Header = () => {
           <img src={HeaderImage} alt="Header-Image" />
         </div>
         <h3>Anurag</h3>
-        <p>Aspiring Full Stack Developer</p>
+        <p>Full Stack Developer</p>
         <div className="header_cta">
           <a href="#contact" className="btn primary">
             Let's Talk
