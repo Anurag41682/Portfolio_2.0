@@ -11,7 +11,7 @@ const data = [
     image: Image1,
     title: "Job Tracker",
     desc: "A Job tracking web application to track application and look after them efficiently during job search",
-    demo: "https://jobtracker.anur4g.me/",
+    demo: "",
     github: "https://github.com/Anurag41682/JobTracker",
   },
   {

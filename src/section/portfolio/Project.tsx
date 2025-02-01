@@ -22,14 +22,17 @@ const Project: React.FC<ProjectProps> = ({ pro }) => {
       <h4>{pro.title}</h4>
       <p>{pro.desc}</p>
       <div className="portfolio_project-cta">
-        <a
-          href={pro.demo}
-          className="btn sm white"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Demo
-        </a>
+        {pro.demo && (
+          <a
+            href={pro.demo}
+            className="btn sm white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Demo
+          </a>
+        )}
+
         <a
           href={pro.github}
           className="btn sm primary"
