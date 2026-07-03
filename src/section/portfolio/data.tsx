@@ -4,7 +4,27 @@ import Image3 from "../../assets/project3.png";
 import Image4 from "../../assets/project4.png";
 import Image5 from "../../assets/project5.png";
 import Image6 from "../../assets/project6.png";
+import Image7 from "../../assets/Project7.png";
+import Image8 from "../../assets/Project8.png";
 const data = [
+  {
+    id: 8,
+    category: "Backend",
+    image: Image8,
+    title: "Notify Hub",
+    desc: "Event-driven notification microservice with RabbitMQ retry/DLQ, Redis idempotency, JWT auth, and email delivery. Dockerized and deployed on Linode behind nginx with Cloudflare SSL.",
+    demo: "https://notify-backend.agnomerf.store/",
+    github: "https://notify-backend.agnomerf.store/",
+  },
+  {
+    id: 7,
+    category: "Backend",
+    image: Image7,
+    title: "Taskflow",
+    desc: "A full-stack task management application with role-based access control (Admin/User), invite-based onboarding via tokenized emails, and JWT authentication.",
+    demo: "https://task-flow.agnomerf.store/",
+    github: "https://github.com/Anurag41682/Portfolio_2.0",
+  },
   {
     id: 1,
     category: "Backend",
