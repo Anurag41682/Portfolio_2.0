@@ -27,14 +27,24 @@ const About = () => {
             })}
           </div>
           <p>
-            Hi there, I am Anurag a Full stack developer completed my
-            Bachelor of technology in computer science. My aim is to build
-            software solution for people using my knowledge in Tech.
+            Hi, I'm Anurag — a Full Stack Engineer with strong backend focus,
+            specializing in Java, Spring Boot, Node.js, Express, and React.
           </p>
           <p>
-            I also have good understanding of data structure and algorithm that
-            has helped me in improving my problem solving skills and devising
-            efficient solution for a problem. 
+            I build production-grade systems end-to-end — from designing REST
+            APIs and event-driven microservices to deploying them on cloud
+            infrastructure. My projects include NotifyHub, an async notification
+            microservice with RabbitMQ, Redis idempotency, and Docker, and
+            TaskFlow, a role-based task management system — both live on cloud.
+          </p>
+          <p>
+            I have a strong foundation in Data Structures and Algorithms
+            (LeetCode 1790, Codechef 3 star) and hold an AWS Cloud Practitioner
+            certification.
+          </p>
+          <p>
+            I'm currently looking for backend/fullstack roles where I can work
+            on real engineering problems and grow fast.
           </p>
           {/* <a
             target="_blank"
