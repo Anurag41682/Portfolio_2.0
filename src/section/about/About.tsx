@@ -27,24 +27,28 @@ const About = () => {
             })}
           </div>
           <p>
-            Hi, I'm Anurag — a Full Stack Engineer with strong backend focus,
-            specializing in Java, Spring Boot, Node.js, Express, and React.
+            Hi, I'm Anurag, a Backend Engineer working with Java, Spring Boot,
+            and Node.js, comfortable shipping full-stack features with React. I
+            spent the last two years as a Software Engineer at Capgemini.
           </p>
           <p>
-            I build production-grade systems end-to-end — from designing REST
-            APIs and event-driven microservices to deploying them on cloud
-            infrastructure. My projects include NotifyHub, an async notification
-            microservice with RabbitMQ, Redis idempotency, and Docker, and
-            TaskFlow, a role-based task management system — both live on cloud.
+            I build systems end to end, from designing REST APIs and
+            event-driven microservices to testing, CI, and cloud deployment. My
+            flagship project, NotifyHub, is an async notification microservice
+            with RabbitMQ retries and a dead-letter queue, Redis-based
+            idempotency, Docker Compose, GitHub Actions CI, JUnit/Mockito tests,
+            and k6 load testing, deployed on Linode behind nginx and Cloudflare.
+            I also built TaskFlow, a role-based task management system with a
+            Spring Boot backend and React frontend, both live.
           </p>
           <p>
-            I have a strong foundation in Data Structures and Algorithms
-            (LeetCode 1790, Codechef 3 star) and hold an AWS Cloud Practitioner
-            certification.
+            I have a solid foundation in Data Structures and Algorithms
+            (Codeforces Specialist, CodeChef 4★, LeetCode 1790) and hold an AWS
+            Cloud Practitioner certification.
           </p>
           <p>
-            I'm currently looking for backend/fullstack roles where I can work
-            on real engineering problems and grow fast.
+            I'm currently looking for backend roles where I can work on real
+            engineering problems and grow fast.
           </p>
           {/* <a
             target="_blank"
