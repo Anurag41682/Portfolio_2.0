@@ -1,9 +1,9 @@
 import Image1 from "../../assets/project1.png";
 import Image2 from "../../assets/project2.png";
-import Image3 from "../../assets/project3.png";
+// import Image3 from "../../assets/project3.png";
 import Image4 from "../../assets/project4.png";
-import Image5 from "../../assets/project5.png";
-import Image6 from "../../assets/project6.png";
+// import Image5 from "../../assets/project5.png";
+// import Image6 from "../../assets/project6.png";
 import Image7 from "../../assets/Project7.png";
 import Image8 from "../../assets/Project8.png";
 const data = [
