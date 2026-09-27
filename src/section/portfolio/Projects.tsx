@@ -14,8 +14,8 @@ interface projects {
 const Projects: React.FC<projects> = ({ projects }) => {
   return (
     <div className="portfolio_projects">
-      {projects.map((item) => {
-        return <Project key={item.id} pro={item} />;
+      {projects.map((item, index) => {
+        return <Project key={item.id} pro={item} index={index} />;
       })}
     </div>
   );

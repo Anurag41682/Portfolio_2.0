@@ -1,24 +1,42 @@
 .card {
-  background-color: var(--color-white);
-  padding: 1.5rem;
-  border: 2px solid transparent;
+  position: relative;
+  background: var(--surface);
+  padding: 1.6rem;
+  border: 1px solid var(--border);
   border-radius: var(--border-radius-1);
+  backdrop-filter: blur(12px);
   transition: var(--transition);
 }
 
+/* Gradient border that fades in on hover */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient);
+  -webkit-mask: linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms var(--ease-out);
+}
+
 .card:hover {
-  background-color: transparent;
-  border-color: var(--color-white);
-  transform: translateY(-0.5rem);
+  background: var(--surface-2);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -24px var(--accent-glow);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card.light {
-  background-color: var(--color-light);
-}
-
-.card.light:hover {
-  background-color: transparent;
-  border-color: var(--color-light);
+  background: var(--surface);
 }
 
 @media screen and (max-width: 600px) {

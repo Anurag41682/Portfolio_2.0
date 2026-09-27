@@ -9,16 +9,18 @@
 }
 
 :root {
-  --primary-hue: 129;
-  --black-lightness: 15%;
-  --dark-lightness: 44%;
-  --light-lightness: 94%;
-  --white-lightness: 100%;
-  --color-primary: hsl(var(--primary-hue), 34%, 24%);
-  --color-white: hsl(0, 5%, var(--white-lightness));
-  --color-light: hsl(var(--primary-hue), 5%, var(--light-lightness));
-  --color-black: hsl(var(--primary-hue), 5%, var(--black-lightness));
-  --color-dark: hsl(var(--primary-hue), 5%, var(--dark-lightness));
+  --bg: #07100c;
+  --bg-2: #0b1611;
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text: #e8f0eb;
+  --muted: #93a39a;
+  --accent: #34d399;
+  --accent-2: #22d3ee;
+  --accent-glow: rgba(52, 211, 153, 0.35);
+  --gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
 
   --container-width-lg: 76%;
   --container-width-md: 90%;
@@ -27,35 +29,108 @@
   --border-radius-2: 0.8rem;
   --border-radius-3: 0.5rem;
 
-  --transition: all 500ms ease;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition: all 400ms var(--ease-out);
+
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+
+  color-scheme: dark;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint grid backdrop across the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+  opacity: 0.5;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--accent), var(--accent-2));
+  border-radius: 10px;
+  border: 2px solid var(--bg);
+}
+
+/* Scroll progress bar (progressive enhancement: CSS scroll-driven animation) */
+@supports (animation-timeline: scroll()) {
+  main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 100;
+    background: var(--gradient);
+    transform-origin: 0 50%;
+    animation: scrollProgress linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+@keyframes scrollProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* General Container Style */
 .container {
   width: var(--container-width-lg);
   margin-inline: auto;
-  max-width: 1920px;
+  max-width: 1400px;
 }
 
 /* General Section Style */
 section {
-  padding: 10rem 0;
-  background: var(--color-light);
-  transition: var(--transition);
+  position: relative;
+  padding: 9rem 0;
+  background: transparent;
 }
 
 section:nth-child(even) {
-  background: var(--color-white);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(52, 211, 153, 0.025) 50%,
+    transparent
+  );
 }
 
 section > h2 {
@@ -64,13 +139,37 @@ section > h2 {
 
 section > p {
   text-align: center;
-  margin: 0.5rem auto 4rem;
+  margin: 0.8rem auto 4rem;
   width: 40%;
+  color: var(--muted);
+}
+
+/* Small eyebrow label shown above section headings */
+.eyebrow {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 0.8rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 999px;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* General anchor Style */
 a {
-  color: var(--color-white);
+  color: var(--text);
   transition: var(--transition);
 }
 
@@ -81,16 +180,18 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.1;
-  color: var(--color-black);
+  font-family: var(--font-display);
+  line-height: 1.15;
+  color: var(--text);
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
 
 h3 {
@@ -98,11 +199,11 @@ h3 {
 }
 
 h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 h5 {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 h6 {
@@ -117,49 +218,93 @@ img {
 }
 
 /* General Button Style */
-
 .btn {
-  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background: var(--color-light);
-  color: var(--color-black);
-  padding: 0.6rem 2.5rem;
-  border: 2px solid transparent;
-  border-radius: var(--border-radius-2);
+  gap: 0.8rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text);
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
   cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+/* Shine sweep on hover */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 700ms var(--ease-out);
+}
+
+.btn:hover::after {
+  transform: translateX(120%);
 }
 
 .btn:hover {
-  background-color: transparent;
-  border-color: var(--color-light);
-  transform: translateY(-0.5rem);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -10px var(--accent-glow);
 }
 
-.btn.white {
-  background: var(--color-white);
-}
-
-.btn.white:hover {
-  background: transparent;
-  border-color: var(--color-white);
+.btn.white,
+.btn.light {
+  background: var(--surface);
 }
 
 .btn.primary {
-  background-color: var(--color-primary);
-  color: white; /*text color always white*/
+  background: var(--gradient);
+  color: #04130c;
+  border-color: transparent;
+  box-shadow: 0 8px 24px -8px var(--accent-glow);
 }
 
 .btn.primary:hover {
-  background-color: transparent;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: #04130c;
+  border-color: transparent;
+  box-shadow: 0 14px 34px -8px var(--accent-glow);
 }
 
 .btn.sm {
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.3rem;
+  font-size: 0.85rem;
+}
+
+/* Scroll-reveal: only hidden once JS has opted in, so content is never lost
+   (keyframes with `backwards` fill so hover transforms still work afterwards) */
+.reveal-ready .reveal:not(.is-visible) {
+  opacity: 0;
+}
+
+.reveal-ready .reveal.is-visible {
+  animation: revealUp 900ms var(--ease-out) backwards;
+  animation-delay: calc(var(--i, 0) * 110ms);
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 }
 
 /* Tablets */
@@ -173,7 +318,7 @@ img {
   }
 
   section {
-    padding: 8rem 0;
+    padding: 7rem 0;
   }
 
   section > p {
@@ -182,18 +327,22 @@ img {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
   }
 }
 
 /* Phones */
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   h3 {
@@ -201,14 +350,32 @@ img {
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.7rem 1.5rem;
+  }
+
+  section {
+    padding: 5.5rem 0;
   }
 
   section > p {
     width: var(--container-width-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-ready .reveal:not(.is-visible) {
+    opacity: 1;
   }
 }

@@ -3,29 +3,44 @@ import AboutImage from "../../assets/about.jpg";
 // import { IoMdDownload } from "react-icons/io";
 import Card from "../../components/Card";
 import data from "./data";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const About = () => {
   return (
     <section id="about">
       <div className="container about_container">
-        <div className="about_left">
+        <div className="about_left reveal">
           <div className="about_portrait">
             <img src={AboutImage} alt="About-Image" />
           </div>
         </div>
         <div className="about_right">
-          <h2>About Me</h2>
+          <span className="eyebrow reveal">Get to know me</span>
+          <h2 className="reveal">
+            About <span className="gradient-text">Me</span>
+          </h2>
           <div className="about_cards">
-            {data.map((item) => {
+            {data.map((item, index) => {
               return (
-                <Card key={item.id} className="about_card">
-                  <span className="about_card-icon">{item.icon}</span>
-                  <h5>{item.title}</h5>
-                  <small>{item.desc}</small>
-                </Card>
+                <a
+                  key={item.id}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="about_card-link"
+                  aria-label={`${item.title} profile`}
+                >
+                  <Card className="about_card reveal" index={index}>
+                    <FiArrowUpRight className="about_card-arrow" />
+                    <span className="about_card-icon">{item.icon}</span>
+                    <h5>{item.title}</h5>
+                    <small>{item.desc}</small>
+                  </Card>
+                </a>
               );
             })}
           </div>
+          <div className="about_text reveal">
           <p>
             Hi, I'm Anurag, a Backend Engineer working with Java, Spring Boot,
             and Node.js, comfortable shipping full-stack features with React. I
@@ -50,6 +65,7 @@ const About = () => {
             I'm currently looking for backend roles where I can work on real
             engineering problems and grow fast.
           </p>
+          </div>
           {/* <a
             target="_blank"
             href="https://drive.google.com/file/d/1NamqsTFoX_Ns9nDXfCOw1vK0Ne2-vGHH/view?usp=sharing"

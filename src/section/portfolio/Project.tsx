@@ -11,13 +11,15 @@ interface Project {
 
 interface ProjectProps {
   pro: Project;
+  index?: number;
 }
 
-const Project: React.FC<ProjectProps> = ({ pro }) => {
+const Project: React.FC<ProjectProps> = ({ pro, index }) => {
   return (
-    <Card className="light portfolio_project">
+    <Card className="light portfolio_project" index={index}>
       <div className="portfolio_project-image">
         <img src={pro.image} alt="Project-Image" />
+        <span className="portfolio_project-tag">{pro.category}</span>
       </div>
       <h4>{pro.title}</h4>
       <p>{pro.desc}</p>

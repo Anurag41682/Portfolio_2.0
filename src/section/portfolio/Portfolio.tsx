@@ -18,9 +18,12 @@ const Portfolio = () => {
   };
   return (
     <section id="portfolio">
-      <h2>Recent Projects</h2>
-      <p>Check out some of the projects that I developed</p>
-      <div className="container portfolio_container">
+      <span className="eyebrow reveal">Portfolio</span>
+      <h2 className="reveal">
+        Recent <span className="gradient-text">Projects</span>
+      </h2>
+      <p className="reveal">Check out some of the projects that I developed</p>
+      <div className="container portfolio_container reveal">
         <ProjectCategory
           categories={uniqueCategories}
           onFilterProjects={filterProjectHandler}
