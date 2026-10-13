@@ -13,7 +13,7 @@ const data = [
     image: Image8,
     title: "Notify Hub",
     desc: "Event-driven notification microservice with RabbitMQ retry/DLQ, Redis idempotency, JWT auth, and email delivery. Dockerized and deployed on Linode behind nginx with Cloudflare SSL.",
-    demo: "https://notify-backend.agnomerf.store/",
+    demo: "",
     github: "https://notify-backend.agnomerf.store/",
   },
   {
@@ -22,7 +22,7 @@ const data = [
     image: Image7,
     title: "Taskflow",
     desc: "A full-stack task management application with role-based access control (Admin/User), invite-based onboarding via tokenized emails, and JWT authentication.",
-    demo: "https://task-flow.agnomerf.store/",
+    demo: "",
     github: "https://github.com/Anurag41682/Portfolio_2.0",
   },
   {
@@ -31,7 +31,7 @@ const data = [
     image: Image2,
     title: "Memories",
     desc: "A Social media kind application where user can share their memories to other people by posting on this platform",
-    demo: "https://memories-web-app-two.vercel.app/",
+    demo: "",
     github: "https://github.com/Anurag41682/Memories-WebApp",
   },
   {
