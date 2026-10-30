@@ -52,9 +52,10 @@ const About = () => {
             flagship project, NotifyHub, is an async notification microservice
             with RabbitMQ retries and a dead-letter queue, Redis-based
             idempotency, Docker Compose, GitHub Actions CI, JUnit/Mockito tests,
-            and k6 load testing, deployed on Linode behind nginx and Cloudflare.
-            I also built TaskFlow, a role-based task management system with a
-            Spring Boot backend and React frontend, both live.
+            and k6 load testing, previously deployed on Linode behind nginx and
+            Cloudflare. I also built TaskFlow, a role-based task management
+            system with a Spring Boot backend and React frontend. The code for
+            both is on GitHub.
           </p>
           <p>
             I have a solid foundation in Data Structures and Algorithms

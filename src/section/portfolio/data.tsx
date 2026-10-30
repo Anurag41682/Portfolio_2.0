@@ -12,9 +12,9 @@ const data = [
     category: "Backend",
     image: Image8,
     title: "Notify Hub",
-    desc: "Event-driven notification microservice with RabbitMQ retry/DLQ, Redis idempotency, JWT auth, and email delivery. Dockerized and deployed on Linode behind nginx with Cloudflare SSL.",
+    desc: "Event-driven notification microservice with RabbitMQ retry/DLQ, Redis idempotency, JWT auth, and email delivery. Dockerized and previously deployed on Linode behind nginx with Cloudflare SSL.",
     demo: "",
-    github: "https://notify-backend.agnomerf.store/",
+    github: "https://github.com/Anurag41682/NotifyHub",
   },
   {
     id: 7,
@@ -23,7 +23,7 @@ const data = [
     title: "Taskflow",
     desc: "A full-stack task management application with role-based access control (Admin/User), invite-based onboarding via tokenized emails, and JWT authentication.",
     demo: "",
-    github: "https://github.com/Anurag41682/Portfolio_2.0",
+    github: "https://github.com/Anurag41682/Task-Flow",
   },
   {
     id: 2,
